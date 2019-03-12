@@ -1,0 +1,28 @@
+
+server:
+  port: 9090
+
+# 환경 선택 --- 으로 구분
+spring:
+  profiles:
+    active: dev
+
+# 사내 개발 환경
+---
+spring:
+  profiles: dev
+  jpa:
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://211.48.18.233:3306/ESC?autoReconnect=true&useSSL=false&useUnicode=true&serverTimezone=UTC
+    username: root
+    password: humuson0722
+  batch:
+    initialize-schema: ALWAYS

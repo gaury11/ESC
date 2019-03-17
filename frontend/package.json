@@ -13,7 +13,10 @@
     "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run"
   },
   "dependencies": {
+    "apexcharts": "^3.6.2",
     "axios": "^0.18.0",
+    "highcharts": "^7.0.3",
+    "highcharts-vue": "^1.2.0",
     "vue": "^2.5.2",
     "vue-axios": "^2.1.4",
     "vue-json-tree-view": "^2.1.4",
